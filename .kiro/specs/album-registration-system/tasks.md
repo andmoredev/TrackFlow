@@ -61,14 +61,14 @@
   - **Property 13: Album Key Structure**
   - **Validates: Requirements 3.4**
 
-- [ ] 5. Implement price estimator business logic
+- [x] 5. Implement price estimator business logic
   - Create `workflows/durable-function/lib/price-estimator.mjs`
   - Implement price calculation logic
   - Return price estimate and confidence score
   - Handle estimation errors gracefully
   - _Requirements: 5.2, 5.3_
 
-- [ ] 5.1 Write property test for price estimate completeness
+- [x] 5.1 Write property test for price estimate completeness
   - **Property 22: Price Estimate Completeness**
   - **Validates: Requirements 5.3**
 

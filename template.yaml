@@ -13,11 +13,12 @@ Globals:
         TABLE_NAME: !Ref AlbumTable
         BUCKET_NAME: !Ref ImageBucket
         BEDROCK_MODEL_ID: us.amazon.nova-lite-v1:0
-        AWS_REGION: !Ref AWS::Region
 
 Resources:
   AlbumTable:
     Type: AWS::DynamoDB::Table
+    DeletionPolicy: Delete
+    UpdateReplacePolicy: Delete
     Properties:
       TableName: !Sub '${AWS::StackName}-albums'
       BillingMode: PAY_PER_REQUEST
@@ -58,11 +59,22 @@ Resources:
             ProjectionType: ALL
       PointInTimeRecoverySpecification:
         PointInTimeRecoveryEnabled: true
+      SSESpecification:
+        SSEEnabled: true
 
   ImageBucket:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: !Sub '${AWS::StackName}-images-${AWS::AccountId}'
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
       NotificationConfiguration:
         EventBridgeConfiguration:
           EventBridgeEnabled: true
