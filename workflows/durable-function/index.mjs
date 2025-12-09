@@ -2,6 +2,7 @@ import { withDurableExecution } from '@aws/durable-execution-sdk-js';
 import { processImage } from './lib/image-processor.mjs';
 import { saveExecution, saveAlbum, updateAlbum } from './lib/album-repository.mjs';
 import { estimatePrice } from './lib/price-estimator.mjs';
+import { createValidationTask } from './lib/validation-task-manager.mjs';
 
 export const handler = withDurableExecution(async (event, context) => {
   const { imageS3Key } = event;
@@ -23,8 +24,16 @@ export const handler = withDurableExecution(async (event, context) => {
     })
   );
 
+  const callbackId = `validation-${context.executionId}`;
+
+  await context.step('createValidationTask', async () => {
+    context.logger.info(`Creating validation task for execution ${context.executionId}`);
+    return await createValidationTask(context.executionId, imageS3Key, albums, callbackId);
+  });
+
   const validatedData = await context.wait({
-    callback: { id: `validation-${context.executionId}` }
+    callback: { id: callbackId },
+    timeout: { seconds: 3600 }
   });
 
   if (validatedData && validatedData.albums) {

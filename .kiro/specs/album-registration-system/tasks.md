@@ -72,17 +72,17 @@
   - **Property 22: Price Estimate Completeness**
   - **Validates: Requirements 5.3**
 
-- [ ] 6. Implement validation task management
+- [x] 6. Implement validation task management
   - Create validation task creation logic
   - Implement callback handling for workflow resumption
   - Add timeout handling (1 hour default)
   - _Requirements: 4.1, 4.2, 4.3, 4.4, 4.5_
 
-- [ ] 6.1 Write property test for validation data round-trip
+- [x] 6.1 Write property test for validation data round-trip
   - **Property 18: Validation Data Round-Trip**
   - **Validates: Requirements 4.4**
 
-- [ ] 6.2 Write property test for validation timeout handling
+- [x] 6.2 Write property test for validation timeout handling
   - **Property 19: Validation Timeout Handling**
   - **Validates: Requirements 4.5**
 
