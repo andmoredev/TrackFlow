@@ -101,10 +101,10 @@
   - **Property 32: Failure Status Update**
   - **Validates: Requirements 10.2**
 
-- [ ] 8. Checkpoint - Ensure all Durable Function tests pass
+- [x] 8. Checkpoint - Ensure all Durable Function tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 9. Implement Step Functions state machine
+- [x] 9. Implement Step Functions state machine
   - Create ASL definition in `workflows/step-functions/definition.asl.json`
   - Define all 6 workflow states
   - Configure Map state for parallel price estimation
@@ -112,7 +112,7 @@
   - Add retry and catch configurations
   - _Requirements: 8.1, 8.2, 8.3, 8.4, 8.5_
 
-- [ ] 9.1 Write property test for error retry mechanism
+- [x] 9.1 Write property test for error retry mechanism
   - **Property 28: Error Retry Mechanism**
   - **Validates: Requirements 8.5**
 
