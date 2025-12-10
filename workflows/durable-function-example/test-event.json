@@ -1,0 +1,19 @@
+{
+  "workflowId": "durable-demo-001",
+  "inputData": {
+    "items": [
+      "Process customer data batch A",
+      "Validate inventory records",
+      "Generate monthly reports",
+      "Update product catalog",
+      "Sync external APIs"
+    ]
+  },
+  "startTime": 1704067200000,
+  "metadata": {
+    "source": "demo-system",
+    "priority": "normal",
+    "requestId": "req-12345",
+    "userId": "demo-user"
+  }
+}

@@ -6,7 +6,7 @@ This is an **Album Registration System** comparing **AWS Step Functions** vs **L
 
 **Key Technologies:**
 - AWS SAM Framework
-- Node.js 22.x (ESM modules)
+- Node.js 24.x (ESM modules)
 - AWS Lambda Functions
 - AWS Step Functions (one implementation)
 - Lambda Durable Functions (native AWS orchestration with SDK)
