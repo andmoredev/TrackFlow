@@ -7,7 +7,7 @@ This system compares **AWS Step Functions** vs **Lambda Durable Functions** for 
 ## Core AWS Services
 
 ### AWS Lambda
-- **Runtime**: Node.js 22.x
+- **Runtime**: Node.js 24.x
 - **Architecture**: ARM64 (cost-optimized)
 - **Memory**: 1024 MB (default)
 - **Timeout**: 15 minutes (Lambda function timeout)

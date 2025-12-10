@@ -140,7 +140,7 @@ State flows between Lambda functions via Step Functions. Keep state objects smal
 
 ### JavaScript/Node.js Standards
 - **ES Modules**: Use ESM syntax exclusively
-- **Node.js version**: Target Node.js 22.x
+- **Node.js version**: Target Node.js 24.x
 - **Async/await**: Required for durable functions
 - **Error handling**: Try/catch with proper propagation
 
