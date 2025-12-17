@@ -43,7 +43,7 @@ For detailed explanation and background, read the accompanying blog post: **[Blo
 
 **Just want to deploy quickly?** See [QUICK_DEPLOY.md](docs/QUICK_DEPLOY.md) for a 3-step deployment guide.
 
-**Want to understand the architecture?** See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed system diagrams.
+**Want to understand the architecture?** See [ARCHITECTURE.md](docs/ARCHITECTURE.md) for detailed system diagrams.
 
 ## 🚀 Quick Start
 
